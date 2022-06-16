@@ -30,7 +30,7 @@ def run(args):
     assert args.model_name is not None, \
         "You must specify the --model_name parameter; see README.md for an example"
 
-    if torch.cuda.is_available() and not args.no_cuda:
+    if torch.cuda.is_available():
         device = torch.device("cuda")
     else:
         device = torch.device("cpu")
